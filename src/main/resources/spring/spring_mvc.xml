@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc" 
+	xmlns:sec="http://www.springframework.org/schema/security"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+		http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+		http://www.springframework.org/schema/context 
+		http://www.springframework.org/schema/context/spring-context-3.2.xsd
+		http://www.springframework.org/schema/mvc 
+		http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd
+		http://www.springframework.org/schema/security
+    	http://www.springframework.org/schema/security/spring-security-3.1.xsd
+		http://www.springframework.org/schema/aop 
+		http://www.springframework.org/schema/aop/spring-aop-3.2.xsd">
+
+	<context:component-scan base-package="com.snsoft" />
+	<!-- 启用spring security的Pre/Post注解 -->
+	<sec:global-method-security pre-post-annotations="enabled"  proxy-target-class="true" />
+	
+	<!-- 启动注解驱动的Spring MVC功能 -->
+	<mvc:annotation-driven />
+
+	<!--放过 /static 下的静态文件 -->
+	<mvc:resources mapping="/static/**" location="/static/" />
+
+	<!-- 用默认的Servlet来响应静态文件 -->
+	<mvc:default-servlet-handler />
+
+	<!-- 视图解析分发控制器 -->
+	<bean
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/template/" />
+		<property name="suffix" value=".html" />
+	</bean>
+
+
+	<!-- 输出对象转JSON支持 -->
+	<!-- 解决乱码问题 -->
+	<bean
+		class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">
+		<property name="messageConverters">
+			<list>
+				<bean
+					class="org.springframework.http.converter.StringHttpMessageConverter">
+					<property name="supportedMediaTypes">
+						<list>
+							<value>text/plain;charset=UTF-8</value>
+						</list>
+					</property>
+				</bean>
+				<bean
+					class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter" />
+			</list>
+		</property>
+	</bean>
+	
+	<!-- 实现文件上传，这样一旦某个Request是一个MultipartRequest， 它就会首先被MultipartResolver处理，然后再转发相应的Controller -->
+	<bean id="multipartResolver"
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<!-- 设置上传文件的最大尺寸为1MB <property name="maxUploadSize"> <value>1048576</value> 
+			</property> -->
+	</bean>
+</beans>

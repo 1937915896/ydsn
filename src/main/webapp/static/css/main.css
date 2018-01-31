@@ -1,0 +1,379 @@
+@media screen and (max-width: 980px) {
+    html,
+    body {
+        width: 980px;
+    }
+}
+.loadingImg,
+.loading{
+  display: block;
+  width: 128px;
+  height: 128px;
+  margin: 0 auto;
+  margin-top: 200px;
+}
+table{
+  height: 100%;
+  width: 100%;
+}
+.top{
+  height: 100px;
+}
+.header{
+  width: 100%;
+  height: 100%;
+  background-color: #27aae2;
+  float: left;
+  border-bottom: 5px solid #2cc3ff;
+  color: #fff;
+}
+.header img{
+  float: left;
+  width: 250px;
+  height: 65px;
+  margin: 17px 25px 0 20px;
+}
+.header h1{
+  float: left;
+  font-size: 24px;
+  margin-top: 50px;
+}
+.header div span,
+.header div a{
+  color: #fff;
+  float: right;
+  display: inline-block;
+  margin: 10px 5px;
+}
+.header div #editPwd{
+  margin-right: 30px;
+}
+.content{
+  width: 100%;
+  height: 100%;
+}
+
+.content-left,
+.content-right{
+  vertical-align: top;
+}
+.left{
+  width: 100%;
+  height: 100%;
+  background-color: #f1f1f1;
+  padding-top: 20px;
+}
+.content-left{
+  width: 200px;
+}
+.left ul{
+  margin-top: 10px;
+
+}
+.left ul li{
+  padding-left: 10px;
+  width: 190px;
+  /*height: 30px;*/
+  line-height: 30px;
+  font-size: 14px;
+  /*text-align: center;*/
+  cursor: pointer;
+
+}
+.left ul li:hover{
+  background-color: #59bce2;
+}
+.active{
+  background-color: #27aae2;
+  color: #fff;
+}
+.left ul .active{
+  background-color: #fff;
+  color: #27aae2;
+}
+.left ul .active:hover{
+  background-color: #fff;
+  color: #27aae2;
+}
+
+
+
+.btn{
+  display: inline-block;
+  width: 70px;
+  height: 28px;
+  line-height: 28px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+}
+.btn-primary{
+  background-color: #27aae2;
+  color: #fff;
+  border-color: #27aae2;
+}
+.line{
+  margin-top: 20px;
+  border-bottom: 1px solid #ccc;
+}
+#out{
+  margin: 0 15px;
+}
+#out:hover,
+#in:hover{
+  background-color: #27aae2;
+  color: #fff;
+}
+.right{
+  padding: 10px 20px;
+  height: 100%;
+}
+.resultList1 table,
+#resultList table{
+  width: 100%;
+  text-align: center;
+}
+.resultList1 table tr,
+#resultList table tr{
+  height: 30px;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+.resultList1{
+  display: none;
+}
+.switchPage{
+  height: 30px;
+  margin: 20px 0;
+}
+.switchPage span{
+  font-size: 16px !important;
+}
+.switchPage ul{
+  text-align: center;
+  float: right;
+}
+.switchPage ul li{
+  display: block;
+  float: left;
+  width: 40px;
+  height: 30px;
+  border: 1px solid #ccc;
+  line-height: 30px;
+  margin: 0 5px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.switchPage ul li:hover{
+  background-color: #27aae2;
+  color: #fff;
+}
+.searchTab{
+  width: 100%;
+  /*display: none;*/
+}
+.searchTab table{
+  width: 100%;
+}
+.searchTab div{
+  height: 35px;
+  line-height: 35px;
+  margin: 2px 0;
+}
+.searchTab select{
+  background-color: #fff;
+  display: inline-block;
+  width: 94px;
+  height: 30px;
+  line-height: 30px;
+  padding: 0 5px;
+}
+.searchTab input{
+  width: 80px;
+  height: 26px;
+  padding: 0 5px;
+}
+
+.searchTabList{
+  width: 100%;
+  margin-top: 10px;
+  display: none;
+}
+.searchTabList .searchTitle{
+  font-size: 20px;
+  width: 100%;
+  display: block;
+}
+.searchTabList span{
+  display: inline-block;
+  padding: 5px 5px;
+  margin: 5px 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.clearFix{
+  clear: both;
+}
+
+.result{
+  /*display: none;*/
+}
+.materialId input{
+  width: 200px;
+}
+.bigType span{
+  display: inline-block;
+  float: left;
+  width: 60px;
+  height: 35px;
+  margin: 0px 10px;
+  line-height: 35px;
+  text-align: center;
+  border-radius: 5px;
+}
+.time span{
+  display: inline-block;
+  padding: 0px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.time .searchTitle{
+  padding: 0;
+}
+.searchTitle{
+  display: inline-block;
+  width: 80px;
+  text-align: left;
+}
+#searchAll{
+  margin-left: 10px;
+}
+
+.mask{
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.8);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+}
+.mask .maskdiv{
+  width: 640px;
+  padding: 20px 30px;
+  border-radius: 5px;
+  margin: 0 auto;
+  margin-top: 80px;
+  background-color: #fff;
+  display: none;
+}
+.mask tr{
+  height: 40px;
+}
+.mask .btnGroup{
+  margin-top: 20px;
+  padding-left: 220px;
+}
+.btnGroup .btn{
+  margin-left: 20px;
+}
+.mask input{
+  width: 186px;
+  height: 24px;
+  padding: 0 5px;
+}
+.mask select{
+  width: 97px;
+  height: 28px;
+  background-color: #fff;
+}
+.maskTitle{
+  margin-bottom: 10px;
+}
+.maskTitle span{
+  display: inline-block;
+  text-align: center;
+  font-size: 20px;
+}
+.maskTitle a{
+  float: right;
+}
+.history tr{
+  height: 30px;
+}
+.manageType,
+.manageUsers{
+  width: 100%;
+  height: 100%;
+  margin-top: 0px;
+  display: none;
+}
+.manageType table,
+.manageUsers table{
+  text-align: center;
+  height: auto;
+}
+.manageType tr,
+.manageUsers tr{
+  height: 30px;
+  line-height: 30px;
+}
+.manageType div,
+.manageUsers div{
+  width: 100%;
+  height: 40px;
+}
+.manageType span,
+.manageUsers span{
+  font-size: 20px;
+}
+.manageType .btn,
+.manageUsers .btn{
+  float: right;
+}
+.manageType .btn:hover,
+.manageUsers .btn:hover{
+  text-decoration: none;
+}
+.manageType .manageTypeCheckBtn{
+  padding: 5px 5px;
+  font-size: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.manageType .manageTypeCheckBtn:hover{
+  background-color: #eee;
+}
+.manageType .active:hover{
+  background-color: #27aae2;
+}
+.warn{
+  color: #aa0000;
+}
+.editInfoInput{
+  width: 100%;
+  height: 24px;
+  line-height: 24px;
+}
+.searchTabList span:hover{
+  background-color: #eee;
+}
+.searchTabList .active:hover{
+  background-color: #27aae2;
+}
+.searchTabList .checkBoxBtnHide{
+  display: none;
+}
+/*#searchAll:hover{
+  background-color: #eee;
+}*/
+.time .checkBoxBtn:hover{
+  background-color: #eee;
+}
+.time .active:hover{
+  background-color: #27aae2;
+}
+.hide{
+  display: none;
+}

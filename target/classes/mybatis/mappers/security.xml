@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 用户权限 管理 -->
+<mapper namespace="security">
+	
+	<!-- 获取用户信息 -->
+	<!-- 根据账号 -->
+	<select id="loadUserDetailByAccount" parameterType="java.lang.String" resultType="userDetails">
+		SELECT
+			username,
+			password,
+			role
+		FROM
+			user_info
+		WHERE
+			account = #{account}
+	</select>
+</mapper>

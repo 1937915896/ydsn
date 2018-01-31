@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 示例用的 -->
+<mapper namespace="demo">
+	
+	<!-- 获取用户信息列表 -->
+	<select id="queryUserInfos"  resultType="java.util.HashMap">
+		SELECT
+			account,
+		  	password
+		FROM
+			user_info
+	</select>	
+	
+	<!-- 获取单个用户的信息 -->
+	<select id="queryUserInfo" parameterType="java.util.HashMap" resultType="java.util.HashMap">
+		SELECT
+			account,
+		  	username,
+		  	major
+		FROM
+			user_info
+		WHERE
+			account = #{account};
+	</select>	
+	
+	
+</mapper>

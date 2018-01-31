@@ -1,0 +1,73 @@
+body{
+  background: url('../img/bg1.png') repeat;
+  /*background-size: 100% 100%;*/
+  background-color: #27aae2;
+}
+.loginTab{
+  width: 300px;
+  height: 310px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #ccc;
+  margin: 0 auto;
+  margin-top: 180px;
+  padding: 10px 10px;
+}
+.loginTab img{
+  width: 60px;
+  height: 60px;
+  margin: 0 auto;
+  display: block;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.loginTab h1{
+  display: block;
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  font-size: 24px;
+  text-align: center;
+}
+.loginTab div{
+  margin: 10px 0;
+  font-size: 16px;
+  line-height: 40px;
+  padding: 0 15px;
+}
+.loginTab div span{
+  display: inline-block;
+  width: 80px;
+}
+.loginTab div input{
+  width:170px;
+  height: 30px;
+  padding: 0 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.loginTab span{
+  display: block;
+  width: 100%;
+}
+.loginTab div .btn{
+  line-height: 28px;
+  margin-top: 20px;
+}
+.btn{
+  width: 50px;
+  height: 28px;
+  line-height: 28px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+  display: inline-block;
+}
+.btn-primary{
+  background-color: #27aae2;
+  color: #fff;
+  border-color: #27aae2;
+}
